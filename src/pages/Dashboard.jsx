@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+import api from "../services/api";
 
 function Dashboard() {
 
@@ -7,7 +7,7 @@ function Dashboard() {
 
   useEffect(() => {
 
-    axios
+    api
       .get("https://food-delivery-api-cyuc.onrender.com/api/dashboard/")
       .then((response) => {
         setData(response.data);
