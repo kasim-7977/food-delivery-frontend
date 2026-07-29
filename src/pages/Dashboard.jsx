@@ -8,7 +8,7 @@ function Dashboard() {
   useEffect(() => {
 
     axios
-      .get("http://127.0.0.1:8000/api/dashboard/")
+      .get("https://food-delivery-api-cyuc.onrender.com/api/dashboard/")
       .then((response) => {
         setData(response.data);
       });
