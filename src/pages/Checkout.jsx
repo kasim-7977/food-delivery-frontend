@@ -1,6 +1,6 @@
 import { useState, useContext } from "react";
 import { CartContext } from "../context/CartContext";
-import axios from "axios";
+import api from "../services/api";
 
 function Checkout() {
   const { cart } = useContext(CartContext);
