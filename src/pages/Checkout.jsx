@@ -29,7 +29,7 @@ function Checkout() {
   e.preventDefault();
 
   try {
-    await axios.post(
+    api.post(
       "https://food-delivery-api-cyuc.onrender.com/api/place-order/",
       {
         user: 2,
