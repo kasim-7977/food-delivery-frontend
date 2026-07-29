@@ -6,7 +6,7 @@ function MyOrders() {
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8000/api/orders/")
+      .get("https://food-delivery-api-cyuc.onrender.com/api/orders/")
       .then((response) => {
         setOrders(response.data);
       });
