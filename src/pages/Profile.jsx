@@ -11,7 +11,7 @@ function Profile() {
 
     console.log("TOKEN:", token);
 
-    axios.get(
+    api.get(
       "https://food-delivery-api-cyuc.onrender.com/api/profile/",
       {
         headers: {
