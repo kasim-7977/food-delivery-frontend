@@ -30,7 +30,7 @@ function Checkout() {
 
   try {
     await axios.post(
-      "http://127.0.0.1:8000/api/place-order/",
+      "https://food-delivery-api-cyuc.onrender.com/api/place-order/",
       {
         user: 2,
         full_name: form.full_name,
