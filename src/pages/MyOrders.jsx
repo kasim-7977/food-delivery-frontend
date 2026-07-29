@@ -5,7 +5,7 @@ function MyOrders() {
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
-    axios
+    api
       .get("https://food-delivery-api-cyuc.onrender.com/api/orders/")
       .then((response) => {
         setOrders(response.data);
