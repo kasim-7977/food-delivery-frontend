@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import api from "../services/api";
 
 function Register() {
   const [form, setForm] = useState({
@@ -19,7 +20,7 @@ function Register() {
     e.preventDefault();
 
     try {
-      await axios.post(
+      await api.post(
         "https://food-delivery-api-cyuc.onrender.com/api/register/",
         form
       );
