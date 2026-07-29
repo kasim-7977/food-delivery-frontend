@@ -12,7 +12,7 @@ function Profile() {
     console.log("TOKEN:", token);
 
     axios.get(
-      "http://127.0.0.1:8000/api/profile/",
+      "https://food-delivery-api-cyuc.onrender.com/api/profile/",
       {
         headers: {
           Authorization: `Bearer ${token}`,
