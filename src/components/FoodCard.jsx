@@ -6,11 +6,11 @@ function FoodCard({ food }) {
   return (
     <div className="col-md-4 mb-4">
       <img
-        src={`http://127.0.0.1:8000${food.image}`}
-        className="card-img-top"
-        alt={food.name}
-        style={{ height: "200px", objectFit: "cover" }}
-      />
+  src={food.image}
+  alt={food.name}
+  className="card-img-top"
+  style={{ height: "200px", objectFit: "cover" }}
+/>
 
       <div className="card-body">
         <h5>{food.name}</h5>
