@@ -5,6 +5,7 @@ function FoodCard({ food }) {
   const { addToCart } = useContext(CartContext);
   return (
     <div className="col-md-4 mb-4">
+      <div className="comedy">
       <img
   src={food.image}
   alt={food.name}
@@ -25,6 +26,7 @@ function FoodCard({ food }) {
   Add To Cart
 </button>
       </div>
+      </div>  
     </div>
   );
 }
