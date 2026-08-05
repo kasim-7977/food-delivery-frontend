@@ -84,14 +84,14 @@ function Cart() {
                         </h5>
 
                       </div>
-
+                      <div>
                       <button
-                        id="remove"
                         className=" btn btn-danger"
                         onClick={() => removeItem(item.id)}
                       >
                         Remove
                       </button>
+                        </div>
 
                     </div>
 
