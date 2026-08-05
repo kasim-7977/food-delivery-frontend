@@ -7,6 +7,7 @@ function Checkout() {
 
   const [form, setForm] = useState({
     full_name: "",
+    email:"",
     mobile: "",
     address: "",
     city: "",
@@ -34,6 +35,7 @@ function Checkout() {
       {
         user: 2,
         full_name: form.full_name,
+        email:form.email,
         mobile: form.mobile,
         address: form.address,
         city: form.city,
@@ -61,6 +63,13 @@ function Checkout() {
           className="form-control mb-2"
           name="full_name"
           placeholder="Full Name"
+          onChange={handleChange}
+        />
+        
+        <input
+          className="form-control mb-2"
+          name="email"
+          placeholder="Enter your email"
           onChange={handleChange}
         />
 
