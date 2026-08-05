@@ -226,3 +226,7 @@ textarea {
 .btn-success:hover {
   transform: translateY(-2px);
 }
+#remove{
+  radius-border:10px;
+}
+
