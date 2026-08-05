@@ -181,3 +181,27 @@
     border-right-color: var(--border);
   }
 }
+.card {
+  transition: 0.3s;
+  border-radius: 15px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  transition: 0.3s;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+.btn {
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
