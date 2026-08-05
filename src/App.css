@@ -227,7 +227,8 @@ textarea {
   transform: translateY(-2px);
 }
 .remove{
+  margin-top:25px;
   height:25px;
-  radius-border:10px;
+  radius-border:25px;
 }
 
