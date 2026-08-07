@@ -1,6 +1,7 @@
 import { useState, useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import api from "../services/api";
+//import { data } from "react-router-dom";
 
 function Checkout() {
   const { cart } = useContext(CartContext);
@@ -29,33 +30,34 @@ function Checkout() {
     });
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+ const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    try {
-      await api.post("place-order/", {
-        user: 2,
-        full_name: form.full_name,
-        mobile: form.mobile,
-        address: form.address,
-        city: form.city,
-        pincode: form.pincode,
-        total_amount: total,
-        items: cart.map((item) => ({
-          food: item.id,
-          quantity: item.quantity,
-          price: item.price,
-        })),
-      });
-
-      alert("🎉 Order Placed Successfully!");
-    } catch (error) {
-      console.log(error);
-      alert("Failed to Place Order");
-    }
+  const data = {
+    user: 2, // Replace with logged-in user ID later
+    full_name: form.full_name,
+    mobile: form.mobile,
+    address: form.address,
+    city: form.city,
+    pincode: form.pincode,
+    total_amount: total,
+    items: cart.map((item) => ({
+      food: item.id,
+      quantity: item.quantity,
+      price: item.price,
+    })),
   };
 
-  return (
+  try {
+    await api.post("place-order/", data);
+
+    alert("🎉 Order Placed Successfully!");
+  } catch (error) {
+    console.error(error);
+    alert("Failed to Place Order");
+  }
+};
+ return (
     <div className="container py-5">
 
       <div className="row">
